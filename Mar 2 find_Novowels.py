@@ -1,21 +1,21 @@
-def find_Novowels(a):
-    b = 'aeiou'
+def find_Novowel(a):
+    b= 'aeiou'
     c = []
     for i in a:
         j = i.lower()
-        if len(set(j)&set(b))==0:
+        if len(set(i)&set(b))==0:
             c.append(i)
     return c
             
 
 if __name__ == '__main__':
     c = int(input())
-    a = []
+    a= []
     for i in range(c):
         a.append(input())
-    output = find_Novowels(a)
+    output = find_Novowel(a)
     if len(output)==0:
-        print('No vowel is present in the list')
+        print('No element without vowel is present')
     else:
         for i in output:
             print(i)
